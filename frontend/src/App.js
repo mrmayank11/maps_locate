@@ -70,7 +70,7 @@ function App() {
 
 
     try {
-      const res = await axios.post('http://localhost:8080/pins', newPin);
+      const res = await axios.post('https://maps-locate.onrender.com/pins', newPin);
       // console.log(res.data);
       setPins([...pins, res.data])
     } catch (error) {
@@ -101,13 +101,13 @@ function App() {
     }
 
   };
-  console.log(pins);
+
   useEffect(() => {
 
     const getPins = async () => {
       // let res = ''
       try {
-        const res = await (axios.get('http://localhost:8080/pins'))
+        const res = await (axios.get('https://maps-locate.onrender.com/pins'))
         setPins(res.data)
 
       } catch (error) {

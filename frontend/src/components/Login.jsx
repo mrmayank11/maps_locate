@@ -19,7 +19,7 @@ function Login({ setCurrUser, setLogin }) {
         };
         // console.log(newUser);
         try {
-            const res = await axios.post("http://localhost:8080/users/login", user);
+            const res = await axios.post("https://maps-locate.onrender.com/users/login", user);
             setCurrUser(user.username)
             setLogin(false)
             setError(false);

@@ -21,7 +21,7 @@ function Register({ setCurrUser, setRegister }) {
         };
 
         try {
-            await axios.post("http://localhost:8080/users/register", newUser);
+            await axios.post("https://maps-locate.onrender.com/users/register", newUser);
             setCurrUser(newUser.username)
             setRegister(false)
         } catch (err) {
